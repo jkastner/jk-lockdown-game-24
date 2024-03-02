@@ -1,0 +1,1 @@
+C:\Source\ALittleWordy\alittlewordy.client\obj\Debug\alittlewordy.client.esproj.CoreCompileInputs.cache

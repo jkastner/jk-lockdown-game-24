@@ -1,0 +1,36 @@
+<h1 id="tableLabel">A Little Wordy Helper</h1>
+<div class="form-group">
+  <label for="playerId">Enter Player ID:</label>
+  <input type="number" class="form-control" id="playerId" [(ngModel)]="playerId">
+</div>
+<div class="form-group">
+  <label for="gameId">Enter Game ID:</label>
+  <input type="number" class="form-control" id="gameId" [(ngModel)]="gameId">
+</div>
+
+<button (click)="getUserData()">Load Game</button>
+
+<p *ngIf="!currentGame"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<div *ngIf="currentGame" class="item-container">
+  <div class="vowel" *ngFor="let item of currentGame.activeVowels">{{ item }}</div>
+</div>
+<div *ngIf="currentGame" class="item-container">
+  <div class="consonant" *ngFor="let item of currentGame.activeConsonants">{{ item }}</div>
+</div>
+<div *ngIf="currentGame" class="item-container">
+  <div class="card" *ngFor="let item of currentGame.blueCards">
+    <div>
+      <img src="assets/blue-cards/{{item}}" alt="{{item}}" />
+    </div>
+  </div>
+</div>
+
+<div *ngIf="currentGame" class="item-container">
+  <div class="card" *ngFor="let item of currentGame.redCards">
+    <div>
+      <img src="assets/red-cards/{{item}}" alt="{{item}}" />
+    </div>
+  </div>
+</div>
+
