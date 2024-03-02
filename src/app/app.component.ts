@@ -9,7 +9,7 @@ interface WordyGame {
   redCards: string[];
   blueCards: string[];
 }
-
+//test comment
 
 @Component({
   selector: 'app-root',
