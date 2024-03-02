@@ -1,4 +1,8 @@
 {
+  "engines" : { 
+    "npm" : ">=8.0.0",
+    "node" : ">=16.0.0"
+  }
   "name": "alittlewordy.client",
   "version": "0.0.0",
   "scripts": {
